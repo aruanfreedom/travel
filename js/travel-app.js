@@ -1,11 +1,11 @@
-(function() {
+(function () {
     "use strict";
 
     /*
      *   Click add new route
      * */
 
-    var addRoute = function(e) {
+    var addRoute = function (e) {
         var $clone = $(".add-prototype").clone();
         var $addOrigin = $(".add-new");
 
@@ -20,68 +20,80 @@
      *   Search route
      * */
 
-    var search = function(e) {
+    var search = function (e) {
+
+        e.preventDefault();
 
         var $whence = $("#whence").val().toLowerCase();
         var $where = $("#where").val().toLowerCase();
         var $startDate = $("#start-date").val();
         var $endDate = $("#end-date").val();
-        var $result = $("#result");
+        var $result = $("#result p");
+        var $resultSearch = $("#result-search");
+        var $resultBody = $("#result-search tbody");
         var $classAir = $('input[name="travel-class"]:checked').val();
+
+        var formData = {
+            "location": $whence,
+            "whereAir": $where,
+            "startDate": $startDate,
+            "endDate": $endDate
+        };
+
         if (!$classAir) {
             $classAir = "-"
         }
 
-        var jqxhr = $.getJSON("model/aircraft.json", function() {
-                console.log("success");
-            })
-            .done(function(data) {
-                $.each(data, function(i, item) {
-                    // console.log($startDate)
-                    console.log($startDate)
-                    console.log(item.location.toLowerCase() === $whence)
-                    console.log(item.where.toLowerCase() === $where)
-                    console.log(item.startDate.toLowerCase() == $startDate)
+        var jqxhr = $.ajax({
+            url: "aircraft.php",
+            type: 'POST',
+            data: 'jsonData=' + $.toJSON(formData)
+        })
+            .done(function (data) {
+                console.log(data);
+                $resultBody.html("");
+                $resultSearch.hide();
 
-                    if (item.location.toLowerCase() === $whence && item.where.toLowerCase() === $where && item.startDate.toLowerCase() == $startDate) {
-                        $result.html(
-                            `<div class='row'>
-                                <div class='col-md-6'>
-                                    <img src='img/plane.png' class='w100'>
-                                </div>
-                                <div class='col-md-6'> 
-                                    <p><b>Откуда: </b> ${item.location} </p>  
-                                    <p><b>Куда: </b> ${item.where} </p>
-                                    <p><b>Дата отправление: </b> ${item.startDate} </p>
-                                    <p><b>Класс: </b> ${$classAir} </p>
-                                </div>
-                                <div class='col-md-12'> 
-                                    <button type="button" class="btn btn-success pull-right btn-lg">Заказать</button>
-                                </div>
-                            </div>`
-                        );
-                    } else {
-                        $result.html("<p>Нет билетов с такими параметрами</p>");
-                    }
-                });
-            })
-            .fail(function() {
-                console.log("error");
-            })
-            .always(function() {
-                console.log("complete");
+                if (data === 'Error empty') {
+                    $result.html("Заполнены не все поля");
+                    return;
+                }
+
+                var result = JSON.parse(data);
+
+                if (result.length === 0) {
+                    $result.html("Нет билетов с такими параметрами");
+                }
+
+                $resultSearch.show();
+                $result.html("");
+                console.log(result);
+
+                $.each(result, function (i, item) {
+                        $resultBody.append(
+                            "<tr>" +
+                                "<td>" + item.location + "</td>" +
+                                "<td>" + item.whereAir + " </td>" +
+                                "<td> " + item.startDate + " </td>" +
+                                "<td> " + item.endDate + " </td>" +
+                                "<td> " + $classAir + "</td>" +
+                            "<td> <button type='button' class='btn btn-success btn-block'>Заказать</button></td>"
+                    + "</tr>"
+                );
             });
 
-
-
-        jqxhr.complete(function() {
-            console.log("second complete");
-        });
-
-        e.preventDefault();
     }
+    )
+    .fail(function () {
+        console.log("error");
+    });
 
-    $("#search-route").click(search);
+
+}
+;
+
+$("#search-route").click(search);
 
 
-})();
+})
+();

@@ -125,7 +125,7 @@
                                     <div class="center-middle">
                                         <div class="col-md-6">
                                             <label>Эконом
-                                                <input type="radio" name="travel-class" value="Эконом">
+                                                <input type="radio" name="travel-class" value="Эконом" checked>
                                             </label>
                                         </div>
                                         <div class="col-md-6">
@@ -164,7 +164,7 @@
 
  <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -172,6 +172,20 @@
       </div>
       <div id="result" class="modal-body">
         <p>Нет билетов с такими параметрами</p>
+          <table id="result-search" class="table table-bordered">
+              <thead>
+              <tr>
+                  <th>Откуда</th>
+                  <th>Куда</th>
+                  <th>Дата отправление</th>
+                  <th>Когда обратно</th>
+                  <th>Класс</th>
+                  <th>Действие</th>
+              </tr>
+              </thead>
+              <tbody>
+              </tbody>
+          </table>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
