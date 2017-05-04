@@ -9,7 +9,7 @@
                 </form>
                 <a class="navbar-brand hidden-xs hidden-sm" href="index.php">
 
-                    <img src="img/logo-wight.svg" alt="Логотип" class="logo-wight" title="Логотип">
+                    <img src="img/logo.png" alt="Логотип" class="logo-wight" title="Логотип">
 
                 </a>
                 <div class="navbar-header">
@@ -27,9 +27,9 @@
                     <div class="nav-home">
                         <ul class="nav navbar-nav">
                             <li><a href="index.php" title="Басқы бет">Главная</a></li>
-                            <li><a href="/" title="Басқы бет">Пакетные туры</a></li>
-                            <li><a href="/" title="Басқы бет">Индивидуальные туры</a></li>
-                            <li><a href="/" title="Басқы бет">Архив туров</a></li>
+                            <li><a href="#" title="Басқы бет">Пакетные туры</a></li>
+                            <li><a href="one-route.php" title="Басқы бет">Индивидуальные туры</a></li>
+                            <li><a href="#" title="Басқы бет">Архив туров</a></li>
                             <li><a href="contacts.php" title="Контакты">Контакты</a></li>
                         </ul>
                     </div>

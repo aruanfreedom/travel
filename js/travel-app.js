@@ -82,18 +82,13 @@
                 );
             });
 
-    }
-    )
+    })
     .fail(function () {
         console.log("error");
     });
-
-
-}
-;
+};
 
 $("#search-route").click(search);
 
 
-})
-();
+})();
