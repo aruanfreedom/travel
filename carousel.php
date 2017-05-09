@@ -5,6 +5,8 @@
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
             <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
         </ol>
 
         <!-- Wrapper for slides -->
@@ -27,6 +29,22 @@
 
             <div class="item">
                 <img src="img/slider/slider3.jpg" class="w100" alt="New York">
+                <div class="carousel-caption">
+                    <h3>Жизнь дана чтобы летать</h3>
+                    <p>Летайте по миру</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/slider/slider4.jpg" class="w100" alt="New York">
+                <div class="carousel-caption">
+                    <h3>Жизнь дана чтобы летать</h3>
+                    <p>Летайте по миру</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/slider/slider5.jpg" class="w100" alt="New York">
                 <div class="carousel-caption">
                     <h3>Жизнь дана чтобы летать</h3>
                     <p>Летайте по миру</p>

@@ -3,8 +3,9 @@
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a {
-    color: #cbe5fb;
+    color: #000;
     font-size: 16px;
+    font-family: 'Lora', serif;
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a:hover {
@@ -30,7 +31,7 @@
 .message-email-home {
     padding: 0px 20px 0 0;
     position: relative;
-    color: #fff;
+    color: #005a8b;
 }
 
 .message-email-home:hover {
@@ -38,11 +39,11 @@
 }
 
 .lang {
-    color: #fff;
+    color: #005a8b;
 }
 
 .home-page-nav {
-    background: #0081FF;
+    background: #B3E5FC;
     /*	padding-bottom: 224px ;*/
     padding-bottom: 380px;
 }
@@ -186,7 +187,8 @@
 }
 
 .title-page {
-    color: #fff;
+    color: #000;
+    font-family: 'Playfair Display', serif;
 }
 
 .uppercase {
@@ -221,7 +223,7 @@ label {
 }
 
 .title-big {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Lora', serif;
     color: #404040;
     font-size: 57px;
     font-weight: 700;
@@ -229,4 +231,8 @@ label {
 
 .lists-one-route {
     clear: both;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
 }

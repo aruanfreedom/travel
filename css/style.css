@@ -5,10 +5,11 @@
 
 body {
     background-color: #EDEDED;
+    font-family: 'Lora', serif;
 }
 
 h1 {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Lora', serif;
     color: #000;
 }
 
@@ -21,7 +22,7 @@ h1 {
 }
 
 #search-post h2 {
-    font-family: Tinos;
+    font-family: 'Lora', serif;
     font-weight: 700;
 }
 
