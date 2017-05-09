@@ -9,15 +9,15 @@
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a:hover {
-    color: #cbe5fb;
+    color: #005a8b;
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a:focus {
-    color: #cbe5fb;
+    color: #005a8b;
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a:active {
-    color: #cbe5fb;
+    color: #005a8b;
 }
 
 .logo-wight {
@@ -35,7 +35,7 @@
 }
 
 .message-email-home:hover {
-    color: #fff;
+    color: #000;
 }
 
 .lang {
@@ -163,7 +163,7 @@
 }
 
 .about>.container>.row>.col-md-4>.h3 {
-    color: #404040;
+    color: #005a8b;
     font-size: 57px;
     font-weight: 700;
     padding-top: 25px;
@@ -171,7 +171,7 @@
 
 .text-about {
     color: #797979;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 30px;
 }
 
