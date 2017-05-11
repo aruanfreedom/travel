@@ -15,7 +15,7 @@ include("head.php");
 
     include("menu.php");
 
-    include("routes-turist.php");
+    include("search.php");
 
     include("carousel.php");
 
@@ -25,9 +25,6 @@ include("head.php");
 
 <?php
 
-
-
-include("content.php");
 
 include("footer.php");
 

@@ -28,7 +28,7 @@
                         <ul class="nav navbar-nav">
                             <li><a href="index.php" title="Басқы бет">Главная</a></li>
                             <li><a href="#" title="Басқы бет">Пакетные туры</a></li>
-                            <li><a href="one-route.php" title="Басқы бет">Индивидуальные туры</a></li>
+                            <li><a href="routes.php" title="Басқы бет">Индивидуальные туры</a></li>
                             <li><a href="#" title="Басқы бет">Архив туров</a></li>
                             <li><a href="contacts.php" title="Контакты">Контакты</a></li>
                         </ul>

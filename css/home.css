@@ -10,6 +10,7 @@
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a:hover {
     color: #005a8b;
+    border: 2px solid #005a8b;
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a:focus {
@@ -43,7 +44,7 @@
 }
 
 .home-page-nav {
-    background: #B3E5FC;
+    background: #0081FF;
     /*	padding-bottom: 224px ;*/
     padding-bottom: 380px;
 }
@@ -57,7 +58,7 @@
     font-weight: 700;
     font-size: 55px;
     line-height: 60p;
-    padding-top: 125px;
+    padding-top: 25px;
 }
 
 .hgroup .h2 {
@@ -235,4 +236,8 @@ label {
 
 .carousel-caption {
     background: rgba(0, 0, 0, 0.4);
+}
+
+.dis1 {
+    margin-bottom: 50px;
 }

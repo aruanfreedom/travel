@@ -1,11 +1,11 @@
-(function () {
+(function() {
     "use strict";
 
     /*
      *   Click add new route
      * */
 
-    var addRoute = function (e) {
+    var addRoute = function(e) {
         var $clone = $(".add-prototype").clone();
         var $addOrigin = $(".add-new");
 
@@ -20,7 +20,7 @@
      *   Search route
      * */
 
-    var search = function (e) {
+    var search = function(e) {
 
         e.preventDefault();
 
@@ -45,11 +45,11 @@
         }
 
         var jqxhr = $.ajax({
-            url: "aircraft.php",
-            type: 'POST',
-            data: 'jsonData=' + $.toJSON(formData)
-        })
-            .done(function (data) {
+                url: "aircraft.php",
+                type: 'POST',
+                data: 'jsonData=' + $.toJSON(formData)
+            })
+            .done(function(data) {
                 console.log(data);
                 $resultBody.html("");
                 $resultSearch.hide();
@@ -69,26 +69,76 @@
                 $result.html("");
                 console.log(result);
 
-                $.each(result, function (i, item) {
-                        $resultBody.append(
-                            "<tr>" +
-                                "<td>" + item.location + "</td>" +
-                                "<td>" + item.whereAir + " </td>" +
-                                "<td> " + item.startDate + " </td>" +
-                                "<td> " + item.endDate + " </td>" +
-                                "<td> " + $classAir + "</td>" +
-                            "<td> <button type='button' class='btn btn-success btn-block'>Заказать</button></td>"
-                    + "</tr>"
-                );
+                $.each(result, function(i, item) {
+                    $resultBody.append(
+                        "<tr>" +
+                        "<td>" + item.location + "</td>" +
+                        "<td>" + item.whereAir + " </td>" +
+                        "<td> " + item.startDate + " </td>" +
+                        "<td> " + item.endDate + " </td>" +
+                        "<td> " + $classAir + "</td>" +
+                        "<td> <button type='button' class='btn btn-success btn-block'>Заказать</button></td>" +
+                        "</tr>"
+                    );
+                });
+
+            })
+            .fail(function() {
+                console.log("error");
             });
+    };
 
-    })
-    .fail(function () {
-        console.log("error");
-    });
-};
+    $("#search-route").click(search);
 
-$("#search-route").click(search);
+    var searchOneTravel = function() {
+        var $modelTurist = $(".model-turist").val();
+        var $resultBody = $("#result-search tbody");
+        var $result = $("#result p");
+        var formData = {
+            "model-turist": $modelTurist
+        }
+        console.log($modelTurist)
+        var jqxhr = $.ajax({
+                url: "aircraft-turs.php",
+                type: 'POST',
+                data: 'jsonData=' + $.toJSON(formData)
+            })
+            .done(function(data) {
+                console.log(data);
+                $resultBody.html("");
+
+                if (data === 'Error empty') {
+                    $result.html("Заполнены не все поля");
+                    return;
+                }
+
+                var result = JSON.parse(data);
+
+                if (result.length === 0) {
+                    $result.html("Нет билетов с такими параметрами");
+                }
+
+                $result.html("");
+
+                $.each(result, function(i, item) {
+                    $resultBody.append(
+                        "<tr>" +
+                        "<td>" + item.location + "</td>" +
+                        "<td>" + item.whereAir + " </td>" +
+                        "<td> " + item.startDate + " </td>" +
+                        "<td> " + item.endDate + " </td>" +
+                        "<td> <button type='button' class='btn btn-success btn-block'>Заказать</button></td>" +
+                        "</tr>"
+                    );
+                });
+
+            })
+            .fail(function() {
+                console.log("error");
+            });
+    };
+
+    $(".search-routes-btn").click(searchOneTravel);
 
 
 })();
