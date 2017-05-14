@@ -98,7 +98,9 @@
         var formData = {
             "model-turist": $modelTurist
         }
-        console.log($modelTurist)
+
+        $resultOriginal.hide();
+
         var jqxhr = $.ajax({
                 url: "aircraft-turs.php",
                 type: 'POST',
@@ -119,6 +121,7 @@
                 if (result.length === 0) {
                     $resultOriginal.hide();
                     $result.html("Нет билетов с такими параметрами");
+                    return;
                 }
 
                 $result.html("");
