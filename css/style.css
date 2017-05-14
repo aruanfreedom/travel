@@ -100,9 +100,12 @@ h1 {
 }
 
 .navbar-brand>img {
-    position: absolute;
-    top: 34px;
-    left: 0;
+    position: relative;
+}
+
+#responsive-menu {
+    top: 20px;
+    position: relative;
 }
 
 .navbar-form {
@@ -187,8 +190,8 @@ h1 {
 }
 
 .navbar-nav {
-    float: right;
-    height: 30px;
+    background: #005a8b;
+    width: 100%;
 }
 
 .item-box {

@@ -3,22 +3,24 @@
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a {
-    color: #005a8b;
+    color: #fff;
     font-size: 16px;
     font-family: 'Lora', serif;
+    display: inline-block;
+    padding: 20px;
+    text-transform: uppercase;
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a:hover {
-    color: #005a8b;
-    border: 2px solid #005a8b;
+    background: rgba(0, 76, 117, 0.45);
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a:focus {
-    color: #005a8b;
+    background: rgba(0, 76, 117, 0.45);
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a:active {
-    color: #005a8b;
+    background: rgba(0, 76, 117, 0.45);
 }
 
 .logo-wight {
