@@ -13,11 +13,11 @@
 							</div><!-- /input-group -->
 						</div>
 					</div>
-                    <div class="col-md-4">
-                        <div class="pull-right">
-                            <?php include("weather.php"); ?>
-                        </div>
-                    </div>
+              <div class="col-md-4">
+                  <div>
+                      <?php include("weather.php"); ?>
+                  </div>
+              </div>
 		  		</div>
 		  	</div>
 		  </section>

@@ -10,7 +10,7 @@
                     <form action="#" class="navbar-form">
                         <div class="pull-right hidden-xs "><a href="#" class="message-email-home">Написать нам</a>Қаз/<a
                                 href="#" class="lang">Рус</a></div>
-                        <a href="index.php"><img src="img/logo-wight.svg"
+                        <a href="index.php"><img src="img/logo.png"
                                                             class="hidden-md hidden-lg logo-mobile"></a>
                     </form>
                 </div>
@@ -32,7 +32,7 @@
                             <li><a href="index.php" title="Басқы бет">Главная</a></li>
                             <li><a href="#" title="Басқы бет">Пакетные туры</a></li>
                             <li><a href="routes.php" title="Басқы бет">Индивидуальные туры</a></li>
-                            <li><a href="#" title="Басқы бет">Архив туров</a></li>
+                            <li><a href="#" title="Басқы бет">Галерея</a></li>
                             <li><a href="contacts.php" title="Контакты">Контакты</a></li>
                         </ul>
                     </div>

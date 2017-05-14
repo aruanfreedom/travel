@@ -298,11 +298,6 @@ h1 {
     border-top: 1px solid #fff;
 }
 
-.slide {
-    height: 540px;
-    padding: 0;
-}
-
 .slide h1 {
     font-size: 30px;
 }
@@ -1604,9 +1599,6 @@ ol {
     .list-talk .ou {
         width: inherit;
     }
-    .slide {
-        height: 300px;
-    }
     .slide h1 {
         font-size: 22px;
         font-weight: 700;
@@ -1864,9 +1856,6 @@ ol {
     }
     .big-block {
         /*padding:10px 0px;*/
-    }
-    .slide {
-        height: 450px;
     }
     .slide h1 {
         font-size: 26px;
