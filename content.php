@@ -26,7 +26,7 @@
                 <div class="item-nav item-block-4">
                     <img src="img/4.svg" alt="" class="img-icon-nav">
                     <div class="clearfix"></div>
-                    <a href="#" class="btn btn-link text-center">Галлерея</a>
+                    <a href="#" class="btn btn-link text-center">Галерея</a>
                 </div>
             </div>
         </div>

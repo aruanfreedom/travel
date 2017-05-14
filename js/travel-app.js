@@ -94,6 +94,7 @@
         var $modelTurist = $(".model-turist").val();
         var $resultBody = $("#result-search tbody");
         var $result = $("#result p");
+        var $resultOriginal = $("#result-search");
         var formData = {
             "model-turist": $modelTurist
         }
@@ -108,6 +109,7 @@
                 $resultBody.html("");
 
                 if (data === 'Error empty') {
+                    $resultOriginal.hide();
                     $result.html("Заполнены не все поля");
                     return;
                 }
@@ -115,10 +117,12 @@
                 var result = JSON.parse(data);
 
                 if (result.length === 0) {
+                    $resultOriginal.hide();
                     $result.html("Нет билетов с такими параметрами");
                 }
 
                 $result.html("");
+                $resultOriginal.show();
 
                 $.each(result, function(i, item) {
                     $resultBody.append(

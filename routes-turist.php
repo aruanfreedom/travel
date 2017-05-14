@@ -1,7 +1,7 @@
 <section class="dis1">
 		  	<div class="container">
 		  		<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-8">
 						<div class="hgroup">
 							<h1 class="h1">Поиск пакетных туров по сайту</h1>
 							<h2 class="h2">Введите в поиск название страны или города</h2>
@@ -13,7 +13,7 @@
 							</div><!-- /input-group -->
 						</div>
 					</div>
-                    <div class="col-md-7">
+                    <div class="col-md-4">
                         <div class="pull-right">
                             <?php include("weather.php"); ?>
                         </div>

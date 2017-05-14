@@ -188,6 +188,7 @@ h1 {
 
 .navbar-nav {
     float: right;
+    height: 30px;
 }
 
 .item-box {

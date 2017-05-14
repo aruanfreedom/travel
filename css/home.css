@@ -3,7 +3,7 @@
 }
 
 .home-page-nav>.container>.navbar-default .navbar-nav>li>a {
-    color: #000;
+    color: #005a8b;
     font-size: 16px;
     font-family: 'Lora', serif;
 }
@@ -44,26 +44,27 @@
 }
 
 .home-page-nav {
-    background: #0081FF;
+    background: #E6E6FA;
     /*	padding-bottom: 224px ;*/
     padding-bottom: 380px;
 }
 
 .hgroup .h1,
 .h2 {
-    color: #fff;
+    color: #005a8b;
 }
 
 .hgroup .h1 {
     font-weight: 700;
     font-size: 55px;
     line-height: 60p;
-    padding-top: 25px;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .hgroup .h2 {
     font-size: 22px;
-    color: #a2d3fd;
+    color: #005a8b;
     padding: 15px 0 30px;
     margin: 0;
 }
