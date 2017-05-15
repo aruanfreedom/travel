@@ -285,3 +285,7 @@ label {
         padding: 0.7em;
     }
 }
+
+.footer-empty {
+    padding-bottom: 80px;
+}

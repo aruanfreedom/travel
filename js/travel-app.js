@@ -24,25 +24,69 @@
 
         e.preventDefault();
 
-        var $whence = $("#whence").val().toLowerCase();
-        var $where = $("#where").val().toLowerCase();
-        var $startDate = $("#start-date").val();
-        var $endDate = $("#end-date").val();
+        var $mainActive = $(".tab-content .tab-pane.active");
+
+        var $whence = $mainActive.find(".whence").val().toLowerCase();
+        var $where = $mainActive.find(".where").val().toLowerCase();
+        var $startDate = $mainActive.find(".start-date").val();
+        var $endDate = $mainActive.find(".end-date").val();
+
+        var sum = $mainActive.find(".whence");
+        var formData = {};
+
+        if ($endDate === undefined) {
+            $endDate = new Date();
+            var curr_date = $endDate.getDate();
+            var curr_month = $endDate.getMonth() + 1;
+            var curr_year = $endDate.getFullYear();
+            $endDate = curr_year + "-" + curr_month + "-" + curr_date;
+        }
+
+        var several = function(arr) {
+            var $whenceArr = [];
+            var $whereArr = [];
+            var $startDateArr = [];
+
+            $.each(arr, function(i, item) {
+                $whenceArr.push($($mainActive.find(".whence")[i]).val().toLowerCase());
+                $whereArr.push($($mainActive.find(".where")[i]).val().toLowerCase());
+                $startDateArr.push($($mainActive.find(".start-date")[i]).val());
+            });
+
+            formData = {
+                location: $whenceArr,
+                whereAir: $whereArr,
+                startDate: $startDateArr,
+                endDate: $endDate
+            };
+
+        }
+
+        if (sum.length > 1) {
+            several(sum);
+        } else {
+            formData = {
+                location: $whence,
+                whereAir: $where,
+                startDate: $startDate,
+                endDate: $endDate
+            };
+        }
+
         var $result = $("#result p");
         var $resultSearch = $("#result-search");
         var $resultBody = $("#result-search tbody");
         var $classAir = $('input[name="travel-class"]:checked').val();
 
-        var formData = {
-            "location": $whence,
-            "whereAir": $where,
-            "startDate": $startDate,
-            "endDate": $endDate
-        };
+
 
         if (!$classAir) {
             $classAir = "-"
         }
+
+        $resultSearch.hide();
+
+        console.log(formData);
 
         var jqxhr = $.ajax({
                 url: "aircraft.php",
@@ -63,6 +107,7 @@
 
                 if (result.length === 0) {
                     $result.html("Нет билетов с такими параметрами");
+                    return;
                 }
 
                 $resultSearch.show();

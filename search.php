@@ -16,26 +16,26 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="whence">Откуда</label>
-                                            <input type="text" class="form-control" id="whence" placeholder="Алматы">
+                                            <input type="text" class="form-control whence" id="whence" placeholder="Алматы">
                                             <i class="fa fa-arrows-h icon-arrow" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="where">Куда</label>
-                                            <input type="text" class="form-control" id="where" placeholder="Астана">
+                                            <input type="text" class="form-control where" id="where" placeholder="Астана">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="start-date">Дата отправление</label>
-                                            <input type="date" class="form-control" id="start-date">
+                                            <input type="date" class="form-control start-date" id="start-date">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="end-date">Когда обратно</label>
-                                            <input type="date" class="form-control" id="end-date">
+                                            <input type="date" class="form-control end-date" id="end-date">
                                         </div>
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="location-route">Откуда</label>
-                                            <input type="text" class="form-control" id="location-route"
+                                            <input type="text" class="form-control whence" id="location-route"
                                                    placeholder="Алматы">
                                             <i class="fa fa-arrow-right icon-arrow" aria-hidden="true"></i>
                                         </div>
@@ -55,13 +55,13 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="where-two">Куда</label>
-                                            <input type="text" class="form-control" id="where-two" placeholder="Астана">
+                                            <input type="text" class="form-control where" id="where-two" placeholder="Астана">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="one-start-date">Дата отправление</label>
-                                            <input type="date" class="form-control" id="one-start-date">
+                                            <input type="date" class="form-control start-date" id="one-start-date">
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="one-whence">Откуда</label>
-                                                    <input type="text" class="form-control" id="one-whence"
+                                                    <input type="text" class="form-control whence" id="one-whence"
                                                            placeholder="Алматы">
                                                     <i class="fa fa-arrow-right icon-arrow" aria-hidden="true"></i>
                                                 </div>
@@ -83,14 +83,14 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="one-where">Куда</label>
-                                                    <input type="text" class="form-control" id="one-where"
+                                                    <input type="text" class="form-control where" id="one-where"
                                                            placeholder="Астана">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="one-end-date">Дата отправление</label>
-                                                    <input type="date" class="form-control" id="one-end-date">
+                                                    <input type="date" class="form-control start-date" id="one-end-date">
                                                 </div>
                                             </div>
                                         </div>

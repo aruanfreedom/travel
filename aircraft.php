@@ -4,7 +4,6 @@ include("db.php");
 $json = json_decode($_POST['jsonData']);
 
 $response = array();
-//$sql;
 
 foreach ($json as $key=>$value) {
     if(empty($value)) {
@@ -13,17 +12,39 @@ foreach ($json as $key=>$value) {
     $response[] = $value;
 }
 
-$sql = "SELECT * FROM aircraft WHERE location LIKE '%" . $response[0] . "%' 
+
+
+if (count($response[0]) > 1) {
+    $data = array();
+
+    for ($i = 0; $i < count($response); $i++) {        
+        for ($j = 0; $j < count($response[$i]); $j++) {
+            $sql = "SELECT * FROM aircraft WHERE location LIKE '%" . $response[$i][$j] . "%'";    
+            $result = mysqli_query($link, $sql);
+
+            
+        }
+        while ($row = mysqli_fetch_assoc($result)) {
+            $data[] = $row;
+        }
+    }    
+
+    echo json_encode($data, JSON_UNESCAPED_UNICODE);
+
+} else {
+    $sql = "SELECT * FROM aircraft WHERE location LIKE '%" . $response[0] . "%' 
         AND whereAir LIKE '%" . $response[1] . "%'
         AND startDate <= '" . $response[2] . "'
         AND endDate >= '" . $response[3] . "'";
 
-$result = mysqli_query($link, $sql);
+    $result = mysqli_query($link, $sql);
 
-$data = array();
+    $data = array();
 
-while ($row = mysqli_fetch_assoc($result)) {
-    $data[] = $row;
+    while ($row = mysqli_fetch_assoc($result)) {
+        $data[] = $row;
+    }
+
+    echo json_encode($data, JSON_UNESCAPED_UNICODE);
 }
 
-echo json_encode($data, JSON_UNESCAPED_UNICODE);

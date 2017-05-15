@@ -9,7 +9,7 @@ include("head.php");
 
 <body>
 
-<section class="home-page-nav">
+<section class="home-page-nav footer-empty">
 
     <?php
 
