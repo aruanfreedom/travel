@@ -48,16 +48,16 @@
             var $startDateArr = [];
 
             $.each(arr, function(i, item) {
-                $whenceArr.push($($mainActive.find(".whence")[i]).val().toLowerCase());
-                $whereArr.push($($mainActive.find(".where")[i]).val().toLowerCase());
-                $startDateArr.push($($mainActive.find(".start-date")[i]).val());
+                $whenceArr.push({
+                    whendce: $($mainActive.find(".whence")[i]).val().toLowerCase(),
+                    where: $($mainActive.find(".where")[i]).val().toLowerCase(),
+                    sd: $($mainActive.find(".start-date")[i]).val(),
+                    ed: $endDate
+                });
             });
 
             formData = {
-                location: $whenceArr,
-                whereAir: $whereArr,
-                startDate: $startDateArr,
-                endDate: $endDate
+                location: $whenceArr
             };
 
         }

@@ -289,3 +289,7 @@ label {
 .footer-empty {
     padding-bottom: 80px;
 }
+
+.gallery-custom img {
+    width: 100%;
+}

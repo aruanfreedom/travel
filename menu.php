@@ -29,10 +29,10 @@
                     <!-- /container -->
                     <div class="nav-home">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.php" title="Басқы бет">Главная</a></li>
-                            <li><a href="#" title="Басқы бет">Пакетные туры</a></li>
-                            <li><a href="routes.php" title="Басқы бет">Индивидуальные туры</a></li>
-                            <li><a href="#" title="Басқы бет">Галерея</a></li>
+                            <li><a href="index.php" title="Главная">Главная</a></li>
+                            <li><a href="#" title="Пакетные туры">Пакетные туры</a></li>
+                            <li><a href="routes.php" title="Индивидуальные туры">Индивидуальные туры</a></li>
+                            <li><a href="gallery.php" title="Галерея">Галерея</a></li>
                             <li><a href="contacts.php" title="Контакты">Контакты</a></li>
                         </ul>
                     </div>

@@ -6,6 +6,11 @@
     <!-- 	<base href="https://termincom.kz/" /> -->
 
     <!-- Style home -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
     <link href="css/home.css" rel="stylesheet">
 
     <!-- Bootstrap -->
