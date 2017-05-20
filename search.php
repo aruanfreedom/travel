@@ -182,3 +182,5 @@
     </div>
   </div>
 </div>
+
+<?php include("profile-modal.php");?>

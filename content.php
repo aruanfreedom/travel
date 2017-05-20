@@ -5,14 +5,14 @@
                 <div class="item-nav item-block-1">
                     <img src="img/1.svg" alt="" class="img-icon-nav">
                     <div class="clearfix"></div>
-                    <a href="#" class="btn btn-link text-center">Пакетные туры</a>
+                    <a href="packages.php" class="btn btn-link text-center">Пакетные туры</a>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="item-nav item-block-2">
                     <img src="img/2.svg" alt="" class="img-icon-nav">
                     <div class="clearfix"></div>
-                    <a href="#" class="btn btn-link text-center">Индивидуальные <br>туры</a>
+                    <a href="routes.php" class="btn btn-link text-center">Индивидуальные <br>туры</a>
                 </div>
             </div>
             <div class="col-md-3">

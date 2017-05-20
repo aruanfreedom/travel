@@ -6,6 +6,7 @@
 body {
     background-color: #EDEDED;
     font-family: 'Lora', serif;
+    padding-right: 0 !important;
 }
 
 h1 {
@@ -1947,9 +1948,48 @@ ul.pagination {
     padding-top: 30px;
 }
 
-#search-route {
+#search-route, #search-hotels {
     margin-top: 15px;
 }
+
+#profile-data .form-group {
+    margin: 20px 0;
+}
+
+.title-country {
+    border: 2px solid #ccc;
+    margin: 0 15px;
+    padding: 5px;
+}
+
+.title-country .location-modal {
+    border-right: 2px solid #ccc;
+    padding-right: 5px;
+}
+
+.title-date .sd-modal {
+    border-right: 2px solid #ccc;
+    padding-right: 5px;
+}
+
+.title-date .ed-modal {
+    padding-left: 5px;
+}
+
+.alert-danger {
+    display: none;
+}
+
+#bottom-radio label{
+    margin-top: 30px;
+}
+
+.title-date {
+    border: 2px solid #ccc;
+    margin: 0 15px;
+    padding: 5px;
+}
+
 
 .w100 {
     width: 100%;

@@ -3,7 +3,7 @@
 		  		<div class="row">
 					<div class="col-md-8">
 						<div class="hgroup">
-							<h1 class="h1">Поиск пакетных туров по сайту</h1>
+							<h1 class="h1">Поиск отели по сайту</h1>
 							<h2 class="h2">Введите в поиск название страны или города</h2>
 							<div class="input-group inpt-search-home">
 							  <input type="text" class="form-control search-home-big model-turist" placeholder="Введите текст поиска">
@@ -54,3 +54,5 @@
     </div>
   </div>
 </div>
+
+<?php include("profile-modal.php");?>
