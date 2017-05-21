@@ -6,7 +6,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="myModalLabel">Пожалуйста заполните данные
+                    <h4 class="modal-title" id="myModalLabel" tkey="please_enter_data">Пожалуйста заполните данные
                         <span class="title-country">
                             <span class="location-modal"></span>
                             <span class="whereAir-modal"></span>
@@ -21,15 +21,15 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Фамилия</label>
+                                <label tkey="last-name">Фамилия</label>
                                 <input type="text" name="last-name" class="form-control">
                             </div>
                             <div class="col-md-4">
-                                <label>Имя</label>
+                                <label tkey="name">Имя</label>
                                 <input type="text" name="name" class="form-control">
                             </div>
                             <div class="col-md-4">
-                                <label>Отчество</label>
+                                <label tkey="other-name">Отчество</label>
                                 <input type="text" name="other-name" class="form-control">
                             </div>
                         </div>
@@ -37,18 +37,18 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Пол</label>
+                                <label tkey="sex">Пол</label>
                                 <select name="sex" class="form-control">
                                     <option>Мужской</option>
                                     <option>Женский</option>
                                 </select>
                             </div>
                             <div class="col-md-4">
-                                <label>Дата рождение</label>
+                                <label tkey="birthday">Дата рождение</label>
                                 <input type="date" name="birthday" class="form-control">
                             </div>
                             <div class="col-md-4">
-                                <label>Номер документа</label>
+                                <label tkey="number-document">Номер документа</label>
                                 <input type="number" name="number-document" class="form-control">
                             </div>
                         </div>
@@ -56,15 +56,15 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Телефон</label>
+                                <label tkey="telephone">Телефон</label>
                                 <input type="number" name="telephone" class="form-control">
                             </div>
                             <div class="col-md-4">
-                                <label>Электронная почта</label>
+                                <label tkey="email">Электронная почта</label>
                                 <input type="email" name="email" class="form-control">
                             </div>
                             <div class="col-md-4">
-                                <label>Взрослые</label>
+                                <label tkey="adults">Взрослые</label>
                                 <input type="number" name="adults" class="form-control adults">
                             </div>
                         </div>
@@ -72,11 +72,11 @@
                     <div class="form-group" id="select-data">
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Дети 2-11 лет</label>
+                                <label tkey="childrens">Дети 2-11 лет</label>
                                 <input type="number" name="childrens-two" class="form-control childrens-two">
                             </div>
                             <div class="col-md-4">
-                                <label>До 2-х лет</label>
+                                <label tkey="childrens-two">До 2-х лет</label>
                                 <input type="number" name="childrens-after" class="form-control childrens-after">
                             </div>
                             <div class="col-md-4" id="bottom-radio">
@@ -89,15 +89,20 @@
                             </div>
                         </div>
                     </div>
+                    <h3><span tkey="summa">Цена</span> - <span class="summa-air"></span> <span class="summa-hotel"></span></h3>
                     <div class="alert alert-danger">
-                        <strong>Ошибка!</strong> Заполнили не все поля!
+                        <strong tkey="error">Ошибка!</strong> <span tkey="error_mes">Заполнили не все поля!</span>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                    <button type="submit" class="btn btn-primary" id="order">Забронировать</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" tkey="close">Закрыть</button>
+                    <button type="submit" class="btn btn-primary" id="order" tkey="reservation">Забронировать</button>
                 </div>
             </form>
         </div>
     </div>
+</div>
+
+<div class="alert alert-success">
+    <strong tkey="success">Операция прошла успешно!</strong> <span tkey="success_mes">Проверьте пожалуйста почту.</span>
 </div>

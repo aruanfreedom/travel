@@ -5,6 +5,8 @@
      *   Click add new route
      * */
 
+    var lang = (localStorage.lang) ? localStorage.lang : $("html").attr("lang");
+
     var addRoute = function(e) {
         var $clone = $(".add-prototype").clone();
         var $addOrigin = $(".add-new");
@@ -73,20 +75,16 @@
             };
         }
 
-        var $result = $("#result p");
-        var $resultSearch = $("#result-search");
-        var $resultBody = $("#result-search tbody");
+        var $result = $(".result .status-message");
+        var $resultSearch = $(".result-search");
+        var $resultBody = $(".result-search tbody");
         var $classAir = $('input[name="travel-class"]:checked').val();
-
-
 
         if (!$classAir) {
             $classAir = "-"
         }
 
         $resultSearch.hide();
-
-        console.log(formData);
 
         var jqxhr = $.ajax({
                 url: "aircraft.php",
@@ -99,20 +97,23 @@
                 $resultSearch.hide();
 
                 if (data === 'Error empty') {
-                    $result.html("Заполнены не все поля");
+                    var langRequired = (lang === "ru") ? "Заполнены не все поля" : "Барлық параметірлер еңгізілмеген";
+                    $result.html(langRequired);
                     return;
                 }
 
                 var result = JSON.parse(data);
 
                 if (result.length === 0) {
-                    $result.html("Нет билетов с такими параметрами");
+                    var langNotFound = (lang === "ru") ? "Нет билетов с такими параметрами" : "Осындай параметірлермен билет табылған жоқ";
+                    $result.html(langNotFound);
                     return;
                 }
 
                 $resultSearch.show();
                 $result.html("");
-                console.log(result);
+
+                var langOrder = (lang === "ru") ? "Заказать" : "Тапсырыс беру";
 
                 $.each(result, function(i, item) {
                     $resultBody.append(
@@ -122,7 +123,8 @@
                         "<td> " + item.startDate + " </td>" +
                         "<td> " + item.endDate + " </td>" +
                         "<td> " + $classAir + "</td>" +
-                        "<td> <button type='button' class='btn btn-success btn-block' data-dismiss='modal' data-toggle='modal' data-target='#profile-modal'>Заказать</button></td>" +
+                        "<td class='summa-air-td'> " + item.summaAir + "</td>" +
+                        "<td> <button type='button' class='btn btn-success btn-block' data-dismiss='modal' data-toggle='modal' data-target='#profile-modal'>"+  langOrder +"</button></td>" +
                         "</tr>"
                     );
                 });
@@ -137,12 +139,14 @@
 
     var searchOneTravel = function() {
         var $modelTurist = $(".model-turist").val();
-        var $resultBody = $("#result-search tbody");
-        var $result = $("#result p");
-        var $resultOriginal = $("#result-search");
+        var $resultBody = $(".result-search tbody");
+        var $result = $(".result p");
+        var $resultOriginal = $(".result-search");
         var formData = {
             "model-turist": $modelTurist
         };
+
+        console.log(formData);
 
         $resultOriginal.hide();
 
@@ -152,12 +156,12 @@
                 data: 'jsonData=' + $.toJSON(formData)
             })
             .done(function(data) {
-                console.log(data);
                 $resultBody.html("");
 
                 if (data === 'Error empty') {
                     $resultOriginal.hide();
-                    $result.html("Заполнены не все поля");
+                    var langRequired = (lang === "ru") ? "Заполнены не все поля" : "Барлық параметірлер еңгізілмеген";
+                    $result.html(langRequired);
                     return;
                 }
 
@@ -165,12 +169,16 @@
 
                 if (result.length === 0) {
                     $resultOriginal.hide();
-                    $result.html("Нет билетов с такими параметрами");
+                    var langNotFound = (lang === "ru") ? "Нет билетов с такими параметрами" : "Осындай параметірлермен билет табылған жоқ";
+                    $result.html(langNotFound);
                     return;
                 }
 
                 $result.html("");
                 $resultOriginal.show();
+
+                var langOrder = (lang === "ru") ? "Заказать" : "Тапсырыс беру";
+
 
                 $.each(result, function(i, item) {
                     $resultBody.append(
@@ -179,7 +187,8 @@
                         "<td>" + item.whereAir + " </td>" +
                         "<td> " + item.startDate + " </td>" +
                         "<td> " + item.endDate + " </td>" +
-                        "<td> <button type='button' class='btn btn-success btn-block' data-dismiss='modal' data-toggle='modal' data-target='#profile-modal'>Заказать</button></td>" +
+                        "<td class='summa-air-td'> " + item.summaAir + " </td>" +
+                        "<td> <button type='button' class='btn btn-success btn-block' data-dismiss='modal' data-toggle='modal' data-target='#profile-modal'>"+  langOrder +"</button></td>" +
                         "</tr>"
                     );
                 });
@@ -194,13 +203,14 @@
         e.preventDefault();
         var $country = $("#country").val().toLowerCase();
         var $city = $("#city").val().toLowerCase();
-        var $sd = $("#start-date").val();
-        var $ed = $("#end-date").val();
+        var $sd = $("#start-date-hotels").val();
+        var $ed = $("#end-date-hotels").val();
         var $numbersCount = $("#numbers").val();
 
-        var $resultBody = $("#result-search tbody");
-        var $result = $("#result p");
-        var $resultOriginal = $("#result-search");
+
+        var $resultBody = $(".result-search tbody");
+        var $result = $(".result p");
+        var $resultOriginal = $(".result-search");
         var formData = {
             country: $country,
             city: $city,
@@ -208,6 +218,10 @@
             ed: $ed,
             numbersCount: $numbersCount
         };
+
+        console.log(formData);
+
+
 
         $resultOriginal.hide();
 
@@ -222,7 +236,8 @@
 
                 if (data === 'Error empty') {
                     $resultOriginal.hide();
-                    $result.html("Заполнены не все поля");
+                    var langRequired = (lang === "ru") ? "Заполнены не все поля" : "Барлық параметірлер еңгізілмеген";
+                    $result.html(langRequired);
                     return;
                 }
 
@@ -230,12 +245,15 @@
 
                 if (result.length === 0) {
                     $resultOriginal.hide();
-                    $result.html("Нет билетов с такими параметрами");
+                    var langNotFound = (lang === "ru") ? "Нет билетов с такими параметрами" : "Осындай параметірлермен билет табылған жоқ";
+                    $result.html(langNotFound);
                     return;
                 }
 
                 $result.html("");
                 $resultOriginal.show();
+
+                var langOrder = (lang === "ru") ? "Заказать" : "Тапсырыс беру";
 
                 $.each(result, function(i, item) {
                     $resultBody.append(
@@ -245,7 +263,8 @@
                         "<td> " + item.startDate + " </td>" +
                         "<td> " + item.endDate + " </td>" +
                         "<td> " + item.numberCount + " </td>" +
-                        "<td> <button type='button' class='btn btn-success btn-block'>Заказать</button></td>" +
+                        "<td class='summa-hotel-td'> " + item.summaHotel + " </td>" +
+                        "<td> <button type='button' class='btn btn-success btn-block order-hotel' data-dismiss='modal' data-toggle='modal' data-target='#profile-modal'>"+  langOrder +"</button></td>" +
                         "</tr>"
                     );
                 });
@@ -257,6 +276,7 @@
     };
 
     var serverSend = function(objArr) {
+        console.log(objArr);
         var formData = {
             location: $(".location-modal").html(),
             whereAir: $(".whereAir-modal").html(),
@@ -276,8 +296,18 @@
             classStatus: $("#bottom-radio").find("input[name='class-status']:checked")
                                            .parents('label')
                                            .text()
-                                           .trim()
+                                           .trim(),
+            summaAir: localStorage.summaAir
         };
+
+        if(objArr[12]) {
+            formData.country = objArr[12].country;
+            formData.city = objArr[12].city;
+            formData.numbers = objArr[12].numbers;
+            formData.summaHotel = localStorage.summaHotel;
+        }
+
+        console.log(formData);
 
         var jqxhr = $.ajax({
             url: "mail.php",
@@ -285,8 +315,14 @@
             data: 'jsonData=' + $.toJSON(formData)
         })
             .done(function(data) {
-                $('#profile-modal').modal('toggle');
                 console.log(data);
+                $('#profile-modal').modal('toggle');
+                if (data === "success") {
+                    $(".alert-success").show();
+                    setTimeout(function() {
+                        $(".alert-success").hide();
+                    }, 5000);
+                }
             })
             .fail(function() {
                 console.log("error");
@@ -295,7 +331,7 @@
 
     var routerData = function(e) {
         e.preventDefault();
-
+        var $hotelsVerify = $("#search-hotels-block");
         var dataForm = $("#profile-data").serializeArray();
 
         for(var item in dataForm) {
@@ -308,7 +344,16 @@
             }
         }
 
+        if ($hotelsVerify.length) {
+            dataForm.push({
+                country: $hotelsVerify.find("#country").val().toLocaleLowerCase(),
+                city: $hotelsVerify.find("#city").val().toLocaleLowerCase(),
+                numbers: $hotelsVerify.find("#numbers").val(),
+            });
+        }
+
         serverSend(dataForm);
+
     };
 
     var orderAir = function(e) {
@@ -318,6 +363,10 @@
         var $startDate = $mainActive.find(".start-date").val();
         var $endDate = $mainActive.find(".end-date").val();
         var $profileData = $("#profile-data");
+        var summaVerify = $(e.target).parents("tr").find(".summa-air-td").length;
+
+        var summaHotel = $(e.target).parents("tr").find(".summa-hotel-td").html();
+
 
       $.each(dataTr, function(i, item){
           var btnValidate = $( (item) ).find("button");
@@ -331,24 +380,45 @@
       $(".sd-modal").html(data[2]);
       $(".ed-modal").html(data[3]);
 
+      if (summaVerify) {
+          if (data.length >= 6) {
+              localStorage.summaAir = data[5];
+              $(".summa-air").html(localStorage.summaAir);
+          } else {
+              localStorage.summaAir = data[4];
+              $(".summa-air").html(localStorage.summaAir);
+          }
+      }
+
+
+        if (summaHotel) {
+            localStorage.summaHotel = summaHotel;
+            $(".summa-hotel").html(localStorage.summaHotel);
+            $(".summa-air").html("");
+        } else {
+            $(".summa-hotel").html("");
+        }
+
       $profileData.find(".adults").val($mainActive.find("#adulds").val());
       $profileData.find(".childrens-two").val($mainActive.find("#childrens").val());
       $profileData.find(".childrens-after").val($mainActive.find("#childrens-two").val());
 
         if ($.trim(data[4]) === "Эконом") {
-          $( $("#bottom-radio").find("input")[0] ).attr("checked", true);
-      } else {
-            console.log(data[4]);
-            $( $("#bottom-radio").find("input")[1] ).attr("checked", true);
-      }
+            $($("#bottom-radio").find("input")[0]).attr("checked", true);
+        } else {
+            $($("#bottom-radio").find("input")[1]).attr("checked", true);
+        }
 
     };
 
     $(".search-routes-btn").click(searchOneTravel);
     $("#search-hotels").click(searchHotels);
 
-    $("#result-search").click(orderAir);
+    $(".result-search").click(orderAir);
     $("#order").click(routerData);
+
+    localStorage.summaAir = "";
+    localStorage.summaHotel = "";
 
 
 })();

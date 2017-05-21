@@ -17,3 +17,4 @@
 
 <!-- search -->
 <script src="js/travel-app.js"></script>
+<script src="js/lang.js"></script>

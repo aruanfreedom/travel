@@ -7,9 +7,10 @@
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <form action="#" class="navbar-form">
-                        <div class="pull-right hidden-xs "><a href="#" class="message-email-home">Написать нам</a>Қаз/<a
-                                href="#" class="lang">Рус</a></div>
+                    <form action="#" class="navbar-form language">
+                        <div class="pull-right hidden-xs ">
+                            <a href="#" id="kz">Қаз</a> /<a
+                                href="#" id="ru" class="lang">Рус</a></div>
                         <a href="index.php"><img src="img/logo.png"
                                                             class="hidden-md hidden-lg logo-mobile"></a>
                     </form>
@@ -29,11 +30,11 @@
                     <!-- /container -->
                     <div class="nav-home">
                         <ul class="nav navbar-nav">
-                            <li><a href="index.php" title="Главная">Главная</a></li>
-                            <li><a href="packages.php" title="Пакетные туры">Пакетные туры</a></li>
-                            <li><a href="routes.php" title="Индивидуальные туры">Индивидуальные туры</a></li>
-                            <li><a href="gallery.php" title="Галерея">Галерея</a></li>
-                            <li><a href="contacts.php" title="Контакты">Контакты</a></li>
+                            <li><a href="index.php" title="Главная" tkey="main_menu">Главная</a></li>
+                            <li><a href="packages.php" title="Пакетные туры" tkey="packages">Пакетные туры</a></li>
+                            <li><a href="routes.php" title="Индивидуальные туры" tkey="air_turs">Индивидуальные туры</a></li>
+                            <li><a href="gallery.php" title="Галерея" tkey="gallery">Галерея</a></li>
+                            <li><a href="contacts.php" title="Контакты" tkey="contacts">Контакты</a></li>
                         </ul>
                     </div>
                 </div>

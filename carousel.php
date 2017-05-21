@@ -14,40 +14,40 @@
             <div class="item active">
                 <img src="img/slider/slider1.jpg" class="w100" alt="Los Angeles">
                 <div class="carousel-caption">
-                    <h3>Вперед за мечтой!</h3>
-                    <p>Для тех кто хочет бросить все и уехать отдыхать</p>
+                    <h3 tkey="slider_title_1">Вперед за мечтой!</h3>
+                    <p tkey="slider_title_1_des">Для тех кто хочет бросить все и уехать отдыхать</p>
                 </div>
             </div>
 
             <div class="item">
                 <img src="img/slider/slider2.jpg" class="w100" alt="Chicago">
                 <div class="carousel-caption">
-                    <h3>Акция!</h3>
-                    <p>Срочные горящие туры на -70% дешевле чем обычные</p>
+                    <h3 tkey="slider_title_2">Акция!</h3>
+                    <p tkey="slider_title_2_des">Срочные горящие туры на -70% дешевле чем обычные</p>
                 </div>
             </div>
 
             <div class="item">
                 <img src="img/slider/slider3.jpg" class="w100" alt="New York">
                 <div class="carousel-caption">
-                    <h3>Горячие предложения</h3>
-                    <p>Проведите свое лето в Турции(Кемер)</p>
+                    <h3 tkey="slider_title_3">Горячие предложения</h3>
+                    <p tkey="slider_title_3_des">Проведите свое лето в Турции(Кемер)</p>
                 </div>
             </div>
 
             <div class="item">
                 <img src="img/slider/slider4.jpg" class="w100" alt="New York">
                 <div class="carousel-caption">
-                    <h3>Атмосфера полного релакса</h3>
-                    <p>Туры на о. Бали дарят атмосферу спокойствия и гармонии!</p>
+                    <h3 tkey="slider_title_4">Атмосфера полного релакса</h3>
+                    <p tkey="slider_title_4_des">Туры на о. Бали дарят атмосферу спокойствия и гармонии!</p>
                 </div>
             </div>
 
             <div class="item">
                 <img src="img/slider/slider5.jpg" class="w100" alt="New York">
                 <div class="carousel-caption">
-                    <h3>Жизнь дана чтобы летать</h3>
-                    <p>Летайте по миру</p>
+                    <h3 tkey="slider_title_5">Жизнь дана чтобы летать</h3>
+                    <p tkey="slider_title_5_des">Летайте по миру</p>
                 </div>
             </div>
         </div>

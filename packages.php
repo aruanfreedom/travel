@@ -15,6 +15,8 @@ include("head.php");
 
     include("menu.php");
 
+    include("search.php");
+
     include("search-hotels.php");
 
     include("carousel.php");

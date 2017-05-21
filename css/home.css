@@ -131,7 +131,7 @@
     color: #404040;
     font-weight: 700;
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 22px;
 }
 
@@ -292,4 +292,8 @@ label {
 
 .gallery-custom img {
     width: 100%;
+}
+
+label {
+    font-size: 0.9em;
 }
