@@ -87,7 +87,7 @@ if (array_key_exists("country", $json)) {
 if (mysqli_query($link, $sql)) {
 
     // получатель
-    $to = 'arooan@gmail.com, '. $json->mail; // обратите внимание на запятую
+    $to = 'Liner.travel01@gmail.com, '. $json->mail; // обратите внимание на запятую
 
     // тема письма
     $subject = 'Ваш заказ принят';
