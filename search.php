@@ -28,13 +28,13 @@
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label for="start-date" tkey="start-date">Отъезд</label>
+                                            <label for="start-date" tkey="date-air-start">Дата вылета</label>
                                             <input type="date" class="form-control start-date" id="start-date">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label for="end-date" tkey="end-date">Въезд</label>
+                                            <label for="end-date" tkey="date-air-end">Когда обратно</label>
                                             <input type="date" class="form-control end-date" id="end-date">
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="one-start-date" tkey="start-date">Отъезд</label>
+                                            <label for="one-start-date" tkey="date-air-start">Отъезд</label>
                                             <input type="date" class="form-control start-date" id="one-start-date">
                                         </div>
                                     </div>
@@ -89,7 +89,7 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label for="one-end-date" tkey="start-date">Отъезд</label>
+                                                    <label for="one-end-date" tkey="date-air-start">Отъезд</label>
                                                     <input type="date" class="form-control start-date" id="one-end-date">
                                                 </div>
                                             </div>
@@ -165,8 +165,8 @@
               <tr>
                   <th tkey="whence">Откуда</th>
                   <th tkey="where">Куда</th>
-                  <th tkey="start-date">Отъезд</th>
-                  <th tkey="end-date">Въезд</th>
+                  <th tkey="date-air-start">Дата вылета</th>
+                  <th tkey="date-air-end">Когда обратно</th>
                   <th tkey="class">Класс</th>
                   <th tkey="summa">Цена</th>
                   <th tkey="event">Действие</th>
