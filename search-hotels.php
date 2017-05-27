@@ -275,6 +275,8 @@
                   <th tkey="end-date">Когда обратно</th>
                   <th tkey="numbers">Номер</th>
                   <th tkey="summa">Цена</th>
+                  <th tkey="name_hotel">Название</th>
+                  <th tkey="adress_hotel">Адрес</th>
                   <th tkey="event">Действие</th>
               </tr>
               </thead>

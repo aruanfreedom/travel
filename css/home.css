@@ -200,7 +200,7 @@
 }
 
 .footer-new {
-    height: 50px;
+    height: auto;
     background: #333333;
 }
 
@@ -208,6 +208,14 @@
     display: block;
     color: #fff;
     padding: 15px 0;
+}
+
+.footer-copy a{
+    color: #fff;
+}
+
+.footer-copy a:hover {
+    color: #fff;
 }
 
 .title-page {

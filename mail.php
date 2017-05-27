@@ -24,7 +24,9 @@ if (array_key_exists("country", $json)) {
                                    city,
                                    summaHotel,
                                    summaAir,
-                                   numbers)
+                                   numbers,
+                                   name_hotel,
+                                   adress_hotel)
         VALUES ('"  . $json->location . "','"
         . $json->whereAir . "','"
         . $json->sd . "','"
@@ -45,6 +47,8 @@ if (array_key_exists("country", $json)) {
         . $json->city . "','"
         . $json->summaAir . "','"
         . $json->summaHotel . "','"
+        . $json->name_hotel . "','"
+        . $json->adress_hotel . "','"
         . $json->numbers . "')";
 } else {
     $sql = "INSERT INTO aircraftorder (location, 
@@ -142,6 +146,8 @@ if (mysqli_query($link, $sql)) {
               <th>Страна</th>
               <th>Город</th>
               <th>Номер</th>
+              <th>Название отели</th>
+              <th>Адрес отеля</th>
         </tr>
         <tr>
             <td>' . $json->birthday . '</td>
@@ -152,6 +158,8 @@ if (mysqli_query($link, $sql)) {
             <td>' . $json->country . '</td>
             <td>' . $json->city . '</td>
             <td>' . $json->numbers . '</td>
+            <td>' . $json->name_hotel  . '</td>
+            <td>' . $json->adress_hotel . '</td>
         </tr>
         </table>
         
@@ -235,7 +243,7 @@ if (mysqli_query($link, $sql)) {
     $headers .= 'Content-type: text/html; charset=UTF8' . "\r\n";
 
     // Отправляем
-    mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers, "-f travel01@gmail.com");
 
     echo "success";
 

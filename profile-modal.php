@@ -6,7 +6,10 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="myModalLabel" tkey="please_enter_data">Пожалуйста заполните данные
+                    <div class="col-md-4 col-sm-4">
+                        <h4 class="modal-title" id="myModalLabel" tkey="please_enter_data">Пожалуйста заполните данные</h4>
+                    </div>
+                    <div class="col-md-8 col-sm-8">
                         <span class="title-country">
                             <span class="location-modal"></span>
                             <span class="whereAir-modal"></span>
@@ -15,7 +18,11 @@
                             <span class="sd-modal"></span>
                             <span class="ed-modal"></span>
                         </span>
-                    </h4>
+                        <span class="block-adress">
+                            <span class="adress-hotel"></span>
+                            <span class="name-hotel"></span>
+                        </span>
+                    </div>
                 </div>
                 <div class="col-md-12">
                     <div class="form-group">
@@ -89,7 +96,8 @@
                             </div>
                         </div>
                     </div>
-                    <h3><span tkey="summa">Цена</span> - <span class="summa-air"></span> <span class="summa-hotel"></span></h3>
+                    <h3><span tkey="summa">Цена</span> - <span class="summa-air"></span> <span
+                                class="summa-hotel"></span></h3>
                     <div class="alert alert-danger">
                         <strong tkey="error">Ошибка!</strong> <span tkey="error_mes">Заполнили не все поля!</span>
                     </div>

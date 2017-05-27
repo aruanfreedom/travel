@@ -264,6 +264,8 @@
                         "<td> " + item.endDate + " </td>" +
                         "<td> " + item.numberCount + " </td>" +
                         "<td class='summa-hotel-td'> " + item.summaHotel + " </td>" +
+                        "<td> " + item.name + " </td>" +
+                        "<td> " + item.address + " </td>" +
                         "<td> <button type='button' class='btn btn-success btn-block order-hotel' data-dismiss='modal' data-toggle='modal' data-target='#profile-modal'>"+  langOrder +"</button></td>" +
                         "</tr>"
                     );
@@ -305,6 +307,8 @@
             formData.city = objArr[12].city;
             formData.numbers = objArr[12].numbers;
             formData.summaHotel = localStorage.summaHotel;
+            formData.name_hotel = objArr[12].name_hotel;
+            formData.adress_hotel = objArr[12].adress_hotel;
         }
 
         console.log(formData);
@@ -349,8 +353,12 @@
                 country: $hotelsVerify.find("#country").val().toLocaleLowerCase(),
                 city: $hotelsVerify.find("#city").val().toLocaleLowerCase(),
                 numbers: $hotelsVerify.find("#numbers").val(),
+                name_hotel: $(".name-hotel").html(),
+                adress_hotel: $(".adress-hotel").html(),
             });
         }
+
+        console.log(dataForm);
 
         serverSend(dataForm);
 
@@ -390,11 +398,12 @@
           }
       }
 
-
         if (summaHotel) {
             localStorage.summaHotel = summaHotel;
             $(".summa-hotel").html(localStorage.summaHotel);
             $(".summa-air").html("");
+            $(".name-hotel").html(data[6]);
+            $(".adress-hotel").html(data[7]);
         } else {
             $(".summa-hotel").html("");
         }

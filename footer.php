@@ -2,7 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="text-center">
-                <span class="footer-copy">Copyright @2017. Line travel</span>
+                <span class="footer-copy">Copyright @2017. Line travel / Мы в социальных сетях <a href="https://www.instagram.com/linertravel/" target="_blank" title="Мы в instagram"><img
+                                src="img/social/Instagram-10.png" alt="instagram"></a> <a href="https://www.facebook.com" target="_blank" title="Мы в instagram"><img
+                                src="img/social/Facebook-20.png" title="Facebook" alt="Facebook"></a> <a href="https://www.facebook.com" target="_blank" title="Мы в instagram"><img
+                                src="img/social/VK.com-20.png" title="VK" alt="VK"></a> <a href="https://twitter.com/" target="_blank" title="Мы в instagram"><img
+                                src="img/social/Twitter-20.png" title="Twitter" alt="Twitter"></a></span>
             </div>
         </div>
     </div>

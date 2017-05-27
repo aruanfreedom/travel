@@ -1999,10 +1999,13 @@ ul.pagination {
 
 .title-date {
     border: 2px solid #ccc;
-    margin: 0 15px;
+    margin: 0 10px;
     padding: 5px;
 }
 
+.block-adress {
+    visibility: hidden;
+}
 
 .w100 {
     width: 100%;
@@ -2024,11 +2027,3 @@ ul.pagination {
     background: rgba(0, 76, 117, 0.45);
 
 }
-
-/*
-#result {
-    display: none;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-}*/
